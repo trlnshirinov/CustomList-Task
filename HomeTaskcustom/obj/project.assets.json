@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\acern\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\acern\\source\\repos\\HomeTaskcustom\\HomeTaskcustom\\HomeTaskcustom.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\CustomList-Task\\HomeTaskcustom\\HomeTaskcustom.csproj",
       "projectName": "HomeTaskcustom",
-      "projectPath": "C:\\Users\\acern\\source\\repos\\HomeTaskcustom\\HomeTaskcustom\\HomeTaskcustom.csproj",
-      "packagesPath": "C:\\Users\\acern\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\acern\\source\\repos\\HomeTaskcustom\\HomeTaskcustom\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\CustomList-Task\\HomeTaskcustom\\HomeTaskcustom.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\CustomList-Task\\HomeTaskcustom\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\acern\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

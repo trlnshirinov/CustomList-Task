@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\bin\Debug\net8.0\HomeTaskcustom.exe
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\bin\Debug\net8.0\HomeTaskcustom.deps.json
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\bin\Debug\net8.0\HomeTaskcustom.runtimeconfig.json
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\bin\Debug\net8.0\HomeTaskcustom.dll
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\bin\Debug\net8.0\HomeTaskcustom.pdb
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\HomeTaskcustom.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\HomeTaskcustom.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\HomeTaskcustom.AssemblyInfo.cs
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\HomeTaskcustom.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\HomeTaskcustom.sourcelink.json
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\HomeTaskcustom.dll
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\refint\HomeTaskcustom.dll
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\HomeTaskcustom.pdb
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\HomeTaskcustom.genruntimeconfig.cache
+C:\Users\User\Desktop\CustomList-Task\HomeTaskcustom\obj\Debug\net8.0\ref\HomeTaskcustom.dll

@@ -4,84 +4,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
+using System;
+
 namespace HomeTaskcustom
 {
-    internal class CustomList
+    internal class CustomList<T>
     {
-        public object[] _array;
+        private T[] _array;
         public int Count { get; private set; }
-        public int Capacity { get { return _array.Length; } }
+        public int Capacity => _array.Length;
 
         public CustomList(int capacity = 4)
         {
             if (capacity < 0)
-            {
-                throw new Exception("Capacity menfi olammaz");
+                throw new Exception("Capacity menfi ola bilmez");
 
-            }
-            _array = new object[capacity];
+            _array = new T[capacity];
         }
 
-
-        public void AddCapacity(int num)
+        private void EnsureCapacity(int size)
         {
-            if (Capacity < num)
-            {
-                int newCapacity = Capacity;
-                if (newCapacity < 1)
-                {
-                    newCapacity = 4;
-                }
-                else
-                {
-                    newCapacity = newCapacity * 2;
-                }
+            if (Capacity >= size) return;
 
-                object[] newArray = new object[newCapacity];
-                for (int i = 0; i < Count; i++)
-                    newArray[i] = _array[i];
-                _array = newArray;
-            }
+            int newCapacity = Capacity == 0 ? 4 : Capacity * 2;
+            while (newCapacity < size)
+                newCapacity *= 2;
+
+            T[] newArray = new T[newCapacity];
+            for (int i = 0; i < Count; i++)
+                newArray[i] = _array[i];
+
+            _array = newArray;
         }
 
-
-        public void Add(object[] item)
+        public void Add(T item)
         {
-            if (item == null)
-            {
-                throw new Exception("Bos ola bilmez");
-            }
-            AddCapacity(Count + item.Length);
-            for (int i = 0; i < item.Length; i++)
-            {
-                _array[Count] = item[i];
-                Count++;
-            }
-
+            EnsureCapacity(Count + 1);
+            _array[Count++] = item;
         }
 
-
-        public void AddRange(object[] items)
+        public void AddRange(T[] items)
         {
             if (items == null)
-                throw new Exception("Array bos olammaz");
+                throw new Exception("Array bos ola bilmez");
 
-            AddCapacity(Count + items.Length);
+            EnsureCapacity(Count + items.Length);
             for (int i = 0; i < items.Length; i++)
-            {
-                _array[Count] = items[i];
-                Count++;
-            }
+                _array[Count++] = items[i];
         }
 
-
-        public void Insert(int index, object item)
+        public void Insert(int index, T item)
         {
             if (index < 0 || index > Count)
                 throw new Exception("Index duzgun deyil");
 
-            AddCapacity(Count + 1);
-
+            EnsureCapacity(Count + 1);
             for (int i = Count; i > index; i--)
                 _array[i] = _array[i - 1];
 
@@ -89,7 +68,7 @@ namespace HomeTaskcustom
             Count++;
         }
 
-        public void InsertRange(int index, object[] items)
+        public void InsertRange(int index, T[] items)
         {
             if (items == null)
                 throw new Exception("Array bos ola bilmez");
@@ -97,10 +76,9 @@ namespace HomeTaskcustom
                 throw new Exception("Index araliga uyusmur");
 
             int insertCount = items.Length;
-            if (insertCount == 0)
-                return;
+            if (insertCount == 0) return;
 
-            AddCapacity(Count + insertCount);
+            EnsureCapacity(Count + insertCount);
 
             for (int i = Count - 1; i >= index; i--)
                 _array[i + insertCount] = _array[i];
@@ -111,14 +89,14 @@ namespace HomeTaskcustom
             Count += insertCount;
         }
 
-        public object Find(object value)
+        public T Find(T value)
         {
             for (int i = 0; i < Count; i++)
             {
-                if (_array[i] != null && _array[i].Equals(value))
+                if (_array[i] != null && _array[i]!.Equals(value))
                     return _array[i];
             }
-            return null;
+            return default!;
         }
 
         public void RemoveAt(int index)
@@ -129,11 +107,11 @@ namespace HomeTaskcustom
             for (int i = index; i < Count - 1; i++)
                 _array[i] = _array[i + 1];
 
-            _array[Count - 1] = null;
+            _array[Count - 1] = default!;
             Count--;
         }
 
-        private int IndexOf(object item)
+        private int IndexOf(T item)
         {
             for (int i = 0; i < Count; i++)
             {
@@ -143,7 +121,7 @@ namespace HomeTaskcustom
             return -1;
         }
 
-        public bool Remove(object item)
+        public bool Remove(T item)
         {
             int index = IndexOf(item);
             if (index == -1)
@@ -156,11 +134,11 @@ namespace HomeTaskcustom
         public void Clear()
         {
             for (int i = 0; i < Count; i++)
-                _array[i] = null;
+                _array[i] = default!;
             Count = 0;
         }
 
-        public object this[int index]
+        public T this[int index]
         {
             get
             {
@@ -174,7 +152,6 @@ namespace HomeTaskcustom
                     throw new Exception("Index duzgun deyil");
                 _array[index] = value;
             }
-
         }
     }
 }
